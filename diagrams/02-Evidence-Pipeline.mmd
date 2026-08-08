@@ -1,0 +1,10 @@
+flowchart LR
+  A[AssetReport] --> B[Validate]
+  B --> C[Product Candidates]
+  C --> D[Region Evidence]
+  D --> E[Attribute Extraction]
+  E --> F[Conflict Resolver]
+  F --> G[Confidence + Criticality]
+  G --> H[Human Review]
+  H --> I[ProductDNA]
+  I --> J[ConsistencyLockSpec]

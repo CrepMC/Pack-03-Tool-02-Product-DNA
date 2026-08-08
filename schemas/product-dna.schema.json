@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/product-dna.schema.json",
+  "title": "ProductDNA",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "artifact_type",
+    "schema_version",
+    "artifact_version",
+    "project_id",
+    "status",
+    "products",
+    "primary_product_id",
+    "locks",
+    "warnings"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_type": {
+      "const": "ProductDNA"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "artifact_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "NEEDS_REVIEW",
+        "APPROVED",
+        "LOCKED"
+      ]
+    },
+    "source_asset_report_id": {
+      "type": "string"
+    },
+    "primary_product_id": {
+      "type": "string"
+    },
+    "products": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/product"
+      }
+    },
+    "locks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/lock"
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "attribute": {
+      "type": "object",
+      "required": [
+        "name",
+        "value",
+        "status",
+        "confidence",
+        "criticality",
+        "evidence_refs"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {},
+        "status": {
+          "enum": [
+            "observed",
+            "inferred",
+            "user_confirmed",
+            "unknown",
+            "conflicted"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "criticality": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "identity_critical"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "product": {
+      "type": "object",
+      "required": [
+        "product_id",
+        "role",
+        "category",
+        "category_confidence",
+        "attributes",
+        "evidence_summary"
+      ],
+      "properties": {
+        "product_id": {
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "primary",
+            "companion",
+            "accessory",
+            "uncertain"
+          ]
+        },
+        "category": {
+          "type": "string"
+        },
+        "subcategory": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "category_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attribute"
+          }
+        },
+        "evidence_summary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "do_not_invent": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "lock": {
+      "type": "object",
+      "required": [
+        "lock_id",
+        "product_id",
+        "json_path",
+        "mode",
+        "rule",
+        "evidence_refs"
+      ],
+      "properties": {
+        "lock_id": {
+          "type": "string"
+        },
+        "product_id": {
+          "type": "string"
+        },
+        "json_path": {
+          "type": "string"
+        },
+        "mode": {
+          "enum": [
+            "hard",
+            "soft",
+            "guard"
+          ]
+        },
+        "rule": {
+          "type": "string"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "question_id",
+        "question",
+        "blocking",
+        "json_path"
+      ],
+      "properties": {
+        "question_id": {
+          "type": "string"
+        },
+        "question": {
+          "type": "string"
+        },
+        "blocking": {
+          "type": "boolean"
+        },
+        "json_path": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReviewQuestion",
+  "type": "object",
+  "required": [
+    "question_id",
+    "question",
+    "blocking",
+    "json_path",
+    "reason"
+  ],
+  "properties": {
+    "question_id": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "blocking": {
+      "type": "boolean"
+    },
+    "json_path": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "free_text_allowed": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

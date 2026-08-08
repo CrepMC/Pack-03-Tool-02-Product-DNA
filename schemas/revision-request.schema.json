@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RevisionRequest",
+  "type": "object",
+  "required": [
+    "request_id",
+    "source_tool",
+    "target_tool",
+    "reason_code",
+    "asset_id",
+    "problem",
+    "requested_action",
+    "blocking"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string"
+    },
+    "source_tool": {
+      "const": "T02_PRODUCT_DNA"
+    },
+    "target_tool": {
+      "enum": [
+        "T01_ASSET_CLEANER",
+        "HUMAN"
+      ]
+    },
+    "reason_code": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "json_path": {
+      "type": "string"
+    },
+    "region": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "problem": {
+      "type": "string"
+    },
+    "requested_action": {
+      "type": "string"
+    },
+    "blocking": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

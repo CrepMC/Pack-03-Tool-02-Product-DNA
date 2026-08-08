@@ -1,0 +1,163 @@
+{
+  "artifact_id": "art_pdna_001",
+  "artifact_type": "ProductDNA",
+  "schema_version": "1.0.0",
+  "artifact_version": "1.0.0",
+  "project_id": "project_fashion_ad_001",
+  "status": "LOCKED",
+  "source_asset_report_id": "art_asset_report_001",
+  "primary_product_id": "prod_shirt_001",
+  "products": [
+    {
+      "product_id": "prod_shirt_001",
+      "role": "primary",
+      "category": "upper_garment",
+      "subcategory": "blouse",
+      "category_confidence": 0.98,
+      "attributes": [
+        {
+          "name": "base_color",
+          "value": "blue",
+          "status": "observed",
+          "confidence": 0.96,
+          "criticality": "high",
+          "evidence_refs": [
+            "ev_color_1"
+          ],
+          "notes": "lighting may shift exact hue"
+        },
+        {
+          "name": "pattern",
+          "value": "black polka dots",
+          "status": "observed",
+          "confidence": 0.97,
+          "criticality": "identity_critical",
+          "evidence_refs": [
+            "ev_pattern_1"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "neckline",
+          "value": "v_neck",
+          "status": "user_confirmed",
+          "confidence": 1.0,
+          "criticality": "identity_critical",
+          "evidence_refs": [
+            "ev_neck_1",
+            "ev_user_1"
+          ],
+          "notes": "flat edge; no shirt collar"
+        },
+        {
+          "name": "collar",
+          "value": "none",
+          "status": "user_confirmed",
+          "confidence": 1.0,
+          "criticality": "identity_critical",
+          "evidence_refs": [
+            "ev_neck_1",
+            "ev_user_1"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "sleeve",
+          "value": "short",
+          "status": "observed",
+          "confidence": 0.96,
+          "criticality": "high",
+          "evidence_refs": [
+            "ev_sleeve_1"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "material_appearance",
+          "value": "matte_woven",
+          "status": "observed",
+          "confidence": 0.77,
+          "criticality": "medium",
+          "evidence_refs": [
+            "ev_material_1"
+          ],
+          "notes": "fiber composition unknown"
+        }
+      ],
+      "evidence_summary": [
+        "front view clear",
+        "neckline user-confirmed"
+      ],
+      "do_not_invent": [
+        "do not add collar/lapel",
+        "do not change polka-dot pattern",
+        "do not add extra garment layers"
+      ]
+    },
+    {
+      "product_id": "prod_pants_001",
+      "role": "companion",
+      "category": "lower_garment",
+      "subcategory": "pants",
+      "category_confidence": 0.95,
+      "attributes": [
+        {
+          "name": "base_color",
+          "value": "beige-cream",
+          "status": "observed",
+          "confidence": 0.91,
+          "criticality": "high",
+          "evidence_refs": [
+            "ev_pants_color"
+          ],
+          "notes": ""
+        },
+        {
+          "name": "leg_shape",
+          "value": "wide_leg",
+          "status": "observed",
+          "confidence": 0.93,
+          "criticality": "high",
+          "evidence_refs": [
+            "ev_pants_shape"
+          ],
+          "notes": ""
+        }
+      ],
+      "evidence_summary": [
+        "full lower-body visible"
+      ],
+      "do_not_invent": [
+        "do not change leg shape"
+      ]
+    }
+  ],
+  "locks": [
+    {
+      "lock_id": "lock_001",
+      "product_id": "prod_shirt_001",
+      "json_path": "$.products[0].attributes[name=neckline]",
+      "mode": "hard",
+      "rule": "Maintain exact V-neck flat edge with no shirt collar or lapel.",
+      "evidence_refs": [
+        "ev_neck_1",
+        "ev_user_1"
+      ]
+    },
+    {
+      "lock_id": "lock_002",
+      "product_id": "prod_shirt_001",
+      "json_path": "$.products[0].attributes[name=pattern]",
+      "mode": "hard",
+      "rule": "Preserve black polka-dot pattern and overall distribution.",
+      "evidence_refs": [
+        "ev_pattern_1"
+      ]
+    }
+  ],
+  "warnings": [
+    "Exact fiber composition unknown."
+  ],
+  "unresolved_questions": [],
+  "created_at": "2026-08-07T04:00:00Z"
+}

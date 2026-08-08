@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "categories": {
+    "upper_garment": [
+      "t_shirt",
+      "shirt",
+      "blouse",
+      "polo",
+      "tank",
+      "sweater",
+      "cardigan",
+      "jacket",
+      "coat",
+      "vest",
+      "hoodie",
+      "other"
+    ],
+    "lower_garment": [
+      "pants",
+      "jeans",
+      "shorts",
+      "leggings",
+      "skirt",
+      "other"
+    ],
+    "dress_or_skirt": [
+      "dress",
+      "gown",
+      "jumpsuit",
+      "romper",
+      "skirt",
+      "other"
+    ],
+    "footwear": [
+      "sneaker",
+      "loafer",
+      "heel",
+      "sandal",
+      "boot",
+      "flat",
+      "slipper",
+      "other"
+    ],
+    "bag": [
+      "handbag",
+      "shoulder_bag",
+      "crossbody",
+      "tote",
+      "clutch",
+      "backpack",
+      "other"
+    ],
+    "headwear": [
+      "hat",
+      "cap",
+      "beanie",
+      "headband",
+      "other"
+    ],
+    "eyewear": [
+      "glasses",
+      "sunglasses",
+      "other"
+    ],
+    "jewelry": [
+      "necklace",
+      "earring",
+      "ring",
+      "bracelet",
+      "brooch",
+      "other"
+    ],
+    "belt": [
+      "belt"
+    ],
+    "watch": [
+      "watch"
+    ],
+    "accessory_other": [
+      "scarf",
+      "tie",
+      "hair_accessory",
+      "other"
+    ]
+  }
+}

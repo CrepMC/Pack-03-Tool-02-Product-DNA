@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "T02HandoffEnvelope",
+  "type": "object",
+  "required": [
+    "source_tool",
+    "target_tool",
+    "artifact_type",
+    "schema_version",
+    "payload_ref",
+    "lock_ref",
+    "integrity_sha256"
+  ],
+  "properties": {
+    "source_tool": {
+      "const": "T02_PRODUCT_DNA"
+    },
+    "target_tool": {
+      "const": "T03_CREATIVE_DIRECTOR"
+    },
+    "artifact_type": {
+      "const": "ProductDNA"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "payload_ref": {
+      "type": "string"
+    },
+    "lock_ref": {
+      "type": "string"
+    },
+    "integrity_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

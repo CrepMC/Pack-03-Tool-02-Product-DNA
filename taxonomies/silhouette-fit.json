@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "fit": [
+    "body_fitted",
+    "slim",
+    "regular",
+    "relaxed",
+    "oversized",
+    "unknown"
+  ],
+  "silhouette": [
+    "straight",
+    "a_line",
+    "boxy",
+    "tapered",
+    "wide_leg",
+    "flare",
+    "bodycon",
+    "flowing",
+    "structured",
+    "unknown"
+  ],
+  "length": [
+    "cropped",
+    "waist",
+    "hip",
+    "mid_thigh",
+    "knee",
+    "midi",
+    "maxi",
+    "full_length",
+    "unknown"
+  ]
+}

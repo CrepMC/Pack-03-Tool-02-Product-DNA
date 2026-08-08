@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "appearance": [
+    "matte_woven",
+    "smooth_woven",
+    "knit",
+    "ribbed",
+    "denim_like",
+    "satin_like",
+    "silk_like",
+    "leather_like",
+    "suede_like",
+    "mesh",
+    "lace",
+    "sheer",
+    "padded",
+    "quilted",
+    "unknown"
+  ],
+  "rule": "appearance is visual; actual fiber composition requires metadata or user confirmation."
+}

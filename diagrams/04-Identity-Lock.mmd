@@ -1,0 +1,9 @@
+flowchart TD
+  A[Attribute] --> B{Status}
+  B -->|user_confirmed| H[Hard Lock]
+  B -->|observed| C{Confidence + Criticality}
+  C -->|high enough| H
+  C -->|medium| S[Soft Lock]
+  C -->|low| G[Guard: do_not_invent]
+  B -->|unknown| G
+  B -->|conflicted| R[Human Review]

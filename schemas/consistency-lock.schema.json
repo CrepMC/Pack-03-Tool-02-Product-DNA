@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ConsistencyLockSpec",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "artifact_type",
+    "schema_version",
+    "product_dna_id",
+    "locks",
+    "global_guards"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string"
+    },
+    "artifact_type": {
+      "const": "ConsistencyLockSpec"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "product_dna_id": {
+      "type": "string"
+    },
+    "locks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "lock_id",
+          "product_id",
+          "json_path",
+          "mode",
+          "rule",
+          "evidence_refs"
+        ],
+        "properties": {
+          "lock_id": {
+            "type": "string"
+          },
+          "product_id": {
+            "type": "string"
+          },
+          "json_path": {
+            "type": "string"
+          },
+          "mode": {
+            "enum": [
+              "hard",
+              "soft",
+              "guard"
+            ]
+          },
+          "rule": {
+            "type": "string"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "global_guards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "patterns": [
+    "solid",
+    "polka_dot",
+    "stripe",
+    "check",
+    "plaid",
+    "floral",
+    "geometric",
+    "animal",
+    "graphic",
+    "logo_repeat",
+    "abstract",
+    "text_print",
+    "unknown"
+  ],
+  "color_policy": {
+    "store": [
+      "canonical_name",
+      "observed_hex_optional",
+      "lighting_uncertainty",
+      "source"
+    ],
+    "never": "treat graded pixel color as exact product color without caveat"
+  }
+}

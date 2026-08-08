@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "necklines": [
+    "crew",
+    "round",
+    "v_neck",
+    "deep_v",
+    "square",
+    "boat",
+    "scoop",
+    "halter",
+    "sweetheart",
+    "off_shoulder",
+    "one_shoulder",
+    "high_neck",
+    "unknown"
+  ],
+  "collars": [
+    "none",
+    "shirt_collar",
+    "spread",
+    "point",
+    "mandarin",
+    "peter_pan",
+    "polo",
+    "notched_lapel",
+    "shawl",
+    "hood",
+    "unknown"
+  ],
+  "rule": "neckline và collar là hai field tách biệt; v_neck + collar:none là hợp lệ."
+}

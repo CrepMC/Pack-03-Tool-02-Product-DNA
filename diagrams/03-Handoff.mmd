@@ -1,0 +1,5 @@
+flowchart LR
+  T01[T01 Asset Cleaner] -->|AssetReport| T02[T02 Product DNA]
+  T02 -->|RevisionRequest| T01
+  T02 -->|ProductDNA + Locks| T03[T03 Creative Director]
+  T03 -->|Reject mutation request| T02

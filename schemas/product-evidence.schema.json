@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductEvidence",
+  "type": "object",
+  "required": [
+    "evidence_id",
+    "asset_id",
+    "region",
+    "observation",
+    "visibility",
+    "quality",
+    "view_angle"
+  ],
+  "properties": {
+    "evidence_id": {
+      "type": "string"
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "region": {
+      "type": "object",
+      "required": [
+        "x",
+        "y",
+        "w",
+        "h"
+      ],
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "w": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "h": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "string"
+    },
+    "visibility": {
+      "enum": [
+        "clear",
+        "partial",
+        "occluded",
+        "unreliable"
+      ]
+    },
+    "quality": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "view_angle": {
+      "enum": [
+        "front",
+        "back",
+        "left",
+        "right",
+        "three_quarter",
+        "detail",
+        "unknown"
+      ]
+    },
+    "supports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contradicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_type": {
+      "enum": [
+        "visual",
+        "metadata",
+        "user_confirmation"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

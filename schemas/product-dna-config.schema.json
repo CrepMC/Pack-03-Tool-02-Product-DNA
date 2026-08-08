@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ProductDNAConfig",
+  "type": "object",
+  "properties": {
+    "critical_review_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.8
+    },
+    "noncritical_review_threshold": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "default": 0.6
+    },
+    "allow_inference": {
+      "type": "boolean",
+      "default": true
+    },
+    "lock_policy": {
+      "enum": [
+        "conservative",
+        "balanced"
+      ],
+      "default": "conservative"
+    },
+    "max_product_candidates": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 8
+    }
+  },
+  "additionalProperties": false
+}

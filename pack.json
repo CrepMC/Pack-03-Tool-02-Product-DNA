@@ -1,0 +1,11 @@
+{
+  "pack_id": "PACK_03_TOOL_02_PRODUCT_DNA",
+  "name": "Tool 02 — Product DNA Engine",
+  "version": "1.0.0",
+  "released_at": "2026-08-07",
+  "upstream": "T01_ASSET_CLEANER",
+  "downstream": "T03_CREATIVE_DIRECTOR",
+  "primary_artifact": "ProductDNA",
+  "language": "vi-VN",
+  "prompt_count": 3
+}
