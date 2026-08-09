@@ -30,16 +30,16 @@ Chạy ba prompt theo đúng thứ tự. Prompt 2 và Prompt 3 giả định Too
 
 ## Cấu trúc
 
-- `docs/`: thiết kế sản phẩm và quy tắc vận hành.
-- `schemas/`: JSON Schema cho artifact/handoff.
-- `taxonomies/`: taxonomy chuẩn để giảm vocabulary drift.
-- `protocol/`: handoff T01→T02 và T02→T03.
-- `examples/`: tình huống chuẩn và mơ hồ.
-- `tests/`: acceptance, regression, adversarial và contract tests.
-- `checklists/`: checklist triển khai và review.
-- `diagrams/`: sơ đồ Mermaid.
-- `templates/`: mẫu issue, revision request, evidence record.
-- `references/`: baseline của dự án và phạm vi claim.
+- [`docs/`](./docs/): thiết kế sản phẩm và quy tắc vận hành.
+- [`schemas/`](./schemas/): JSON Schema cho artifact/handoff.
+- [`taxonomies/`](./taxonomies/): taxonomy chuẩn để giảm vocabulary drift.
+- [`protocol/`](./protocol/): handoff T01→T02 và T02→T03.
+- [`examples/`](./examples/): tình huống chuẩn và mơ hồ.
+- [`tests/`](./tests/): acceptance, regression, adversarial và contract tests.
+- [`checklists/`](./checklists/): checklist triển khai và review.
+- [`diagrams/`](./diagrams/): sơ đồ Mermaid.
+- [`templates/`](./templates/): mẫu issue, revision request, evidence record.
+- [`references/`](./references/): baseline của dự án và phạm vi claim.
 
 ## Definition of Done
 

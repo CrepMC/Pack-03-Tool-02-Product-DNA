@@ -30,7 +30,7 @@ Tách tối thiểu:
 - domain/evidence.ts
 - domain/locks.ts
 - domain/errors.ts
-- schemas/
+- [`schemas/`](../schemas/)
 - adapters/assetReportAdapter.ts
 - services/inputValidator.ts
 - services/productCandidateService.ts (stub interface ở prompt 1)
